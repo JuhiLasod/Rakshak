@@ -208,12 +208,11 @@ html, body {
     height: 150vh;
     justify-content: center;
   }
-  .mix
+  /* .mix
   {
     /* position: absolute; */
     /* background-color: black; */
-    
-  }
+   
   .container
   {
     display: flex;

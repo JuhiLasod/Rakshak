@@ -3,7 +3,12 @@ import "./Dashboard.css";
 import logo from "../components/logo.jpg";
 import woman2 from "../components/woman2.png";
 import dash2img from "../components/dash2.png";
+import {useNavigate} from "react-router-dom";
 function Dashboard(){
+    const navigate=useNavigate();
+    const handlesignup=()=>{
+        navigate("/signup");
+    }
     return (
         <div>
             <div className="Navbar">
@@ -14,7 +19,7 @@ function Dashboard(){
                 <button className="navbtn"><span>Donate</span></button>
                 <button className="navbtn"><span>Future Goals</span></button>
                 <button className="navbtn"><span>Contact us</span></button>
-                <button className="loginbtn"><span>Sign up</span></button>
+                <button className="loginbtn" onClick={handlesignup}><span>Sign up</span></button>
                 <button className="loginbtn"><span>Sign in</span></button>
             </div>
             <div className="dash1">
