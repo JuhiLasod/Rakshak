@@ -208,11 +208,11 @@ html, body {
     height: 150vh;
     justify-content: center;
   }
-  /* .mix
+  .mix
   {
-    /* position: absolute; */
+    position: absolute;
     /* background-color: black; */
-   
+  }
   .container
   {
     display: flex;
@@ -225,12 +225,18 @@ html, body {
     font-size: 15vh;
     font-family: unset;
     font-style: oblique;
-    /* padding-top: 65vh; */
+    padding-top: 65vh;
     padding-left: 20vh;
-    animation: dash2head 1s ease-out forwards;
+    transform: translateX(-35vh);
+    opacity: 0;
+    /* animation: dash2head 1s ease-out forwards; */
     transform: translateX(-35vh);
     width: 40%;
     display: flex;
+  }
+  .head2.visible{
+    animation: dash2head 1s ease-out forwards;
+    animation-delay: 1s;
   }
   @keyframes dash2head {
     to {
@@ -252,3 +258,4 @@ html, body {
     width: 60%;
     display: flex;
   }
+ 

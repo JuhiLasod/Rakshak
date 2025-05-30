@@ -1,10 +1,26 @@
-import React from "react";
+import {React , useEffect} from "react";
 import "./Dashboard.css";
 import logo from "../components/logo.jpg";
 import woman2 from "../components/woman2.png";
 import dash2img from "../components/dash2.png";
 import {useNavigate} from "react-router-dom";
 function Dashboard(){
+    //for frontend animation 
+    useEffect(() => {
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.5 });
+      
+        reveals.forEach(r => observer.observe(r));
+      
+        return () => observer.disconnect();
+      }, []);
+      
     const navigate=useNavigate();
     const handlesignup=()=>{
         navigate("/signup");
@@ -33,10 +49,10 @@ function Dashboard(){
                 <div className="right"><img className="dash1img" src={woman2} alt="woman"/></div>
                
             </div>
-            <div className="dash2">
+            <div className="dash2 ">
                 <div className=" mix dash2img"><img  src={dash2img} alt="globe"/></div>
                 <div className="container">
-                <div className="mix head2">
+                <div className="mix head2 reveal">
                     What we offer
                 </div>
                 <div className="dash2content">
