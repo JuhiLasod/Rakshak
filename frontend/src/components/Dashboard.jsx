@@ -24,7 +24,10 @@ function Dashboard(){
     const navigate=useNavigate();
     const handlesignup=()=>{
         navigate("/signup");
-    }
+    };
+    const handleLogin=()=>{
+        navigate("/login");
+    };
     return (
         <div>
             <div className="Navbar">
@@ -36,7 +39,7 @@ function Dashboard(){
                 <button className="navbtn"><span>Future Goals</span></button>
                 <button className="navbtn"><span>Contact us</span></button>
                 <button className="loginbtn" onClick={handlesignup}><span>Sign up</span></button>
-                <button className="loginbtn"><span>Sign in</span></button>
+                <button className="loginbtn" onClick={handleLogin}><span>Sign in</span></button>
             </div>
             <div className="dash1">
                 <div className="left">
