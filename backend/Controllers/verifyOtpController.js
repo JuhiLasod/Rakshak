@@ -15,3 +15,4 @@ export const verifyOtpController=async(req,res)=>{
         res.send("otp verification failed");
     }
 };
+export default verifyOtpController;
