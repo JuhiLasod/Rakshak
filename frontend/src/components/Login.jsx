@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 function Login(){
+    const navigate=useNavigate();
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [message,setMessage]=useState("");
@@ -21,6 +22,9 @@ function Login(){
         const text=await res.json();
         setMessage(text);
     }
+    const handleForget=()=>{
+        navigate("/reset-password");
+    };
     return (
         <div>
             this is login page
@@ -41,6 +45,7 @@ function Login(){
                 onChange={(e)=>setPassword(e.target.value)}
             />
             <button onClick={handleLogin}>login</button>
+            <button onClick={handleForget}>forget password</button>
             <div>
                 {message}
             </div>
