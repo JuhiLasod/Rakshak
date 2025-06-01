@@ -4,6 +4,7 @@ import Dashboard from "./components/Dashboard";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import ResetPass from "./components/ResetPass";
+import Home from "./components/Home";
 function App() {
   return (
     <Routes>
@@ -11,6 +12,7 @@ function App() {
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/reset-password" element={<ResetPass/>}/>
+      <Route path="/home" element={<Home/>}/>
     </Routes>
   );
 }

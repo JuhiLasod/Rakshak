@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import loginImg from "../components/loginImg.png";
+import logo from "../components/logo.jpg";
+import "../components/SignUp.css";
 
 function SignUp(){
     const navigate=useNavigate();
@@ -45,19 +48,33 @@ function SignUp(){
         // console.log(message);
     }
     return (
-        <div>
-            <div>enter mail id</div>
+        <div className="signup1">
+            <div className="nav1">
+                <img className="logo1"src={logo} alt="logo" onClick={()=>navigate("/")}/>
+                <span className="navspan">your safety is our priority</span>
+            </div>
+            <div className="overall1">
+            <div className="left1">
+                <div>enter mail id</div>
             <input type="email"
                     value={email}
+                    placeholder="enter your email id"
                     onChange={(e)=>{setEmail(e.target.value)}}        
             />
             <div>enter password</div>
             <input type="password"
                     value={password}
+                    placeholder="password"
                     onChange={(e)=>setPassword(e.target.value)}        
             />
             <button onClick={handleSignup}>sign up</button>
             <div>{message}</div>
+            </div>   
+            
+                <div className="right1">
+                    <img  className="loginImg1"src={loginImg} alt="hey"/>
+                </div>
+            </div>
         </div>
     )
 }
