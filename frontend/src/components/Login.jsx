@@ -21,6 +21,10 @@ function Login(){
         });
         const text=await res.json();
         setMessage(text);
+        if(text==="login successfull")
+        {
+            navigate("/home");
+        }
     }
     const handleForget=()=>{
         navigate("/reset-password");

@@ -29,7 +29,7 @@ function Dashboard(){
         navigate("/login");
     };
     return (
-        <div>
+        <div >
             <div className="Navbar">
                 <img className="logo" src={logo} alt="logo"/>
                 <button className="navbtn"><span>Guide Me</span></button>

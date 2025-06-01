@@ -1,0 +1,48 @@
+.signup1
+{
+    /* background: linear-gradient(to right, white, #e3e3e3); */
+    background-color: #e3e3e3;
+}
+.loginImg1
+{
+    width: 75vh;
+}
+.overall1
+{
+    display: flex;
+}
+.right1
+{
+    padding-top: 15vh;
+    width:95vh;
+    height: 85vh;
+}
+.left1
+{
+    width:115vh;
+}
+.nav1
+{
+    background-color: white;
+    height: 13vh
+}
+.logo1
+{
+    padding-left: 10vh;
+    /* padding-top: 2vh; */
+    height: 10vh;
+    /* width: 30vh; */
+}
+.logo1:hover
+{
+    /* height: 9vh; */
+    cursor: pointer;
+}
+.navspan
+{
+    padding-left: 90vh;
+    font-size: 6vh;
+    font-style: italic;
+    /* padding-bottom: 32vh; */
+    
+}
