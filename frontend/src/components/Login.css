@@ -57,8 +57,7 @@
     0% { opacity: 0; }
     5% { opacity: 1; }
     30% { opacity: 1; }
-    35% { opacity: 0; }
-    100% { opacity: 0; }
+    .reason1 {animation-delay: 0s;}
 }
 
 .navspan21 { animation-delay: 0s; }
