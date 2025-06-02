@@ -1,8 +1,9 @@
+
 .signup1
 {
     /* background: linear-gradient(to right, white, #e3e3e3); */
     background-color: #e3e3e3;
-    /* overflow: hidden; */
+    overflow: hidden;
 
 }
 .loginImg1
@@ -12,6 +13,7 @@
 .overall1
 {
     display: flex;
+    height: 87vh;
 }
 .right1
 {
@@ -24,7 +26,7 @@
     /* position: fixed; */
     width:60%;
     padding-left: 3vh;
-    height: 100vh;
+    height: 70vh;
 }
 .nav1
 {
@@ -43,7 +45,10 @@
     height: 10vh;
     /* width: 30vh; */
 }
-.logo1:hover
+/* .logodiv1:hover{
+    display: flex;
+} */
+.logodiv1:hover
 {
     /* height: 9vh; */
     cursor: pointer;
@@ -75,7 +80,7 @@
 
 .headline1
 {
-    padding-top: 15vh;
+    padding-top: 10vh;
     /* font-style:initial; */
     /* font-style: italic; */
     /* font-weight: 900; */
@@ -90,7 +95,7 @@
     color: black
 }
 .welcomespan1{
-    color: rgb(154, 25, 25);
+    color: rgb(194, 35, 35);
 }
 .welcomequote1
 {
@@ -99,7 +104,7 @@
     font-size: 3vh;
 }
 .inputsdiv1{
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
     padding-top: 10vh;
     /* display: flex; */
     /* justify-content:flex-start; */
@@ -127,4 +132,29 @@ input{
     /* padding-top: 3vh; */
     width: 70vh;
     height: 7vh;
+}
+.security1
+{
+    opacity: 0.5;
+    padding-top: 5vh;
+}
+.message1
+{
+    font-size: 3vh;
+    /* font-style: italic; */
+    color: rgb(107, 38, 23);
+    /* justify-content: center; */
+    /* display: flex; */
+}
+.my-confirm-btn1
+{
+    background-color: rgb(194, 35, 35);
+    /* color: rgb(194, 35, 35); */
+}
+.my-confirm-btn1:hover
+{
+    background-color: rgb(138, 130, 128);
+}
+.alerttitle1{
+    color: rgb(194, 35, 35);
 }
