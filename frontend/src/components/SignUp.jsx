@@ -51,24 +51,41 @@ function SignUp(){
         <div className="signup1">
             <div className="nav1">
                 <img className="logo1"src={logo} alt="logo" onClick={()=>navigate("/")}/>
-                <span className="navspan">your safety is our priority</span>
+                <span className="navspan navspan1">Your safety is our priority.</span>
+                <span className="navspan navspan2">Your digital shield.</span>
+                <span className="navspan navspan3">where your safety comes first.</span>
             </div>
             <div className="overall1">
             <div className="left1">
-                <div>enter mail id</div>
-            <input type="email"
+                <div className="headline1">
+                    <div className="welcome1">
+                    Welcome to <span className="welcomespan1">RAKSHAK </span>! 
+                    </div>
+                    <div className="welcomequote1">
+                    To keep connected , please login with your registered email adderess.
+                    </div>
+                </div>
+                <div className="inputsdiv1">
+                    <input className="inputs1" type="email"
                     value={email}
-                    placeholder="enter your email id"
+                    placeholder="@ email address"
                     onChange={(e)=>{setEmail(e.target.value)}}        
-            />
-            <div>enter password</div>
-            <input type="password"
+                    />
+                    <br/>
+                    <br/>
+                    <input className="inputs1" type="password"
                     value={password}
-                    placeholder="password"
+                    placeholder="🗝 password"
                     onChange={(e)=>setPassword(e.target.value)}        
-            />
-            <button onClick={handleSignup}>sign up</button>
+                    />
+                </div> 
+            
+            <br/>
+            <button className="signupbtn1" onClick={handleSignup}>Sign up</button>
             <div>{message}</div>
+            <div>
+            We guard your data like it's our own — secure, encrypted, and never shared.
+            </div>
             </div>   
             
                 <div className="right1">
