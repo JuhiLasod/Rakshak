@@ -1,47 +1,47 @@
-.signup1 {
+.signin2 {
     background-color: #e3e3e3;
     overflow: hidden;
 }
 
-.loginImg1 {
+.loginImg2 {
     width: 75vh;
 }
 
-.overall1 {
+.overall2 {
     display: flex;
     height: 87vh;
 }
 
-.right1 {
+.right2 {
     padding-top: 15vh;
     width: 50%;
     height: 85vh;
 }
 
-.left1 {
+.left2 {
     width: 60%;
     padding-left: 3vh;
     height: 70vh;
 }
 
-.nav1 {
+.nav2 {
     background-color: white;
     height: 13vh;
     display: flex;
     justify-content: space-between;
 }
 
-.logo1 {
+.logo2 {
     padding-left: 10vh;
     padding-top: 1.5vh;
     height: 10vh;
 }
 
-.logodiv1:hover {
+.logodiv2:hover {
     cursor: pointer;
 }
 
-.navspan {
+.navspan_2 {
     padding-left: 149vh;
     color: rgb(194, 35, 35);
     justify-content: end;
@@ -61,36 +61,36 @@
     100% { opacity: 0; }
 }
 
-.navspan1 { animation-delay: 0s; }
-.navspan2 { animation-delay: 3s; }
-.navspan3 { animation-delay: 6s; }
+.navspan21 { animation-delay: 0s; }
+.navspan22 { animation-delay: 3s; }
+.navspan23 { animation-delay: 6s; }
 
-.headline1 {
+.headline2 {
     padding-top: 10vh;
 }
 
-.welcome1 {
+.welcome2 {
     font-size: 8vh;
     font-weight: 500;
     color: black;
 }
 
-.welcomespan1 {
+.welcomespan2 {
     color: rgb(194, 35, 35);
 }
 
-.welcomequote1 {
+.welcomequote2 {
     color: rgb(154, 25, 25);
     font-style: italic;
     font-size: 3vh;
 }
 
-.inputsdiv1 {
+.inputsdiv2 {
     padding-bottom: 3vh;
     padding-top: 10vh;
 }
 
-.inputs1 {
+.inputs2 {
     padding-left: 3vh;
     border: 0.3vh solid rgb(194, 35, 35);
     border-radius: 2vh;
@@ -102,7 +102,7 @@ input {
     height: 7vh;
 }
 
-.signupbtn1 {
+.signinbtn2 {
     border: 0.3vh solid rgb(194, 35, 35);
     background-color: rgb(194, 35, 35);
     border-radius: 2vh;
@@ -112,17 +112,17 @@ input {
     height: 7vh;
 }
 
-.security1 {
+.security2 {
     opacity: 0.5;
     padding-top: 5vh;
 }
 
-.message1 {
+.message2 {
     font-size: 3vh;
-    color: rgb(107, 38, 23);
+    color: rgb(194, 35, 35);
 }
 
-.my-confirm-btn1 {
+.my-confirm-btn2 {
     background-color: rgb(194, 35, 35);
 }
 
@@ -130,24 +130,35 @@ input {
     background-color: rgb(138, 130, 128);
 }
 
-.alerttitle1 {
+.alerttitle2 {
     color: rgb(194, 35, 35);
 }
 
+.fp2
+{
+    color: rgb(194, 35, 35);
+    padding-bottom: 2vh;
+    /* justify-content: end; */
+    width: 20vh;
+}
+.fp2:hover{
+    color: black;
+    cursor: pointer;
+}
 /* ===== Responsive Styles ===== */
 @media (max-width: 1024px) {
-    .overall1 {
+    .overall2 {
         flex-direction: column;
         height: auto;
     }
 
-    .right1, .left1 {
+    .right2, .left2 {
         width: 100%;
         height: auto;
         padding: 2vh;
     }
 
-    .loginImg1 {
+    .loginImg2 {
         width: 90vw;
         max-width: 100%;
         height: auto;
@@ -157,17 +168,17 @@ input {
         width: 90vw;
     }
 
-    .signupbtn1 {
+    .signinbtn2 {
         width: 90vw;
     }
 
-    .logo1 {
+    .logo2 {
         padding-left: 3vh;
         padding-top: 2vh;
         height: 7vh;
     }
 
-    .navspan {
+    .navspan_2 {
         padding-left: 0;
         font-size: 3.5vh;
         position: static;
@@ -175,46 +186,57 @@ input {
         margin-top: 1vh;
     }
 
-    .welcome1 {
+    .welcome2 {
         font-size: 5vh;
     }
 
-    .welcomequote1 {
+    .welcomequote2 {
         font-size: 2.5vh;
     }
 
-    .inputsdiv1 {
+    .inputsdiv2 {
         padding-top: 5vh;
     }
 
-    .message1 {
+    .message2 {
         font-size: 2.5vh;
+    }
+
+    .fp2 {
+        width: 30vh;
+        font-size: 2.2vh;
     }
 }
 
 @media (max-width: 600px) {
-    .welcome1 {
+    .welcome2 {
         font-size: 4vh;
     }
 
-    .welcomequote1 {
+    .welcomequote2 {
         font-size: 2vh;
     }
 
-    .signupbtn1, input {
+    .signinbtn2, input {
         height: 6vh;
         font-size: 2vh;
     }
 
-    .logo1 {
+    .logo2 {
         height: 6vh;
     }
 
-    .navspan {
+    .navspan_2 {
         font-size: 3vh;
     }
 
-    .message1 {
+    .message2 {
         font-size: 2vh;
+    }
+
+    .fp2 {
+        width: 40vh;
+        font-size: 2vh;
+        /* text-align: right; Optional: aligns "Forgot Password" to the right on small screens */
     }
 }
