@@ -2,6 +2,8 @@
 {
     /* background: linear-gradient(to right, white, #e3e3e3); */
     background-color: #e3e3e3;
+    /* overflow: hidden; */
+
 }
 .loginImg1
 {
@@ -14,22 +16,30 @@
 .right1
 {
     padding-top: 15vh;
-    width:95vh;
+    width:50%;
     height: 85vh;
 }
 .left1
 {
-    width:115vh;
+    /* position: fixed; */
+    width:60%;
+    padding-left: 3vh;
+    height: 100vh;
 }
 .nav1
 {
     background-color: white;
-    height: 13vh
+    height: 13vh;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* align-items: end; */
 }
 .logo1
 {
+    
     padding-left: 10vh;
-    /* padding-top: 2vh; */
+    padding-top: 1.5vh;
     height: 10vh;
     /* width: 30vh; */
 }
@@ -40,9 +50,81 @@
 }
 .navspan
 {
-    padding-left: 90vh;
-    font-size: 6vh;
+    /* align-items: end; */
+    padding-left: 149vh;
+    color: rgb(194, 35, 35);
+    justify-content: end;
+    font-size: 5vh;
     font-style: italic;
+    padding-top: 3vh;
+    opacity: 0;
     /* padding-bottom: 32vh; */
-    
+    animation: slideshow 12s infinite;
+    position: absolute;
+}
+@keyframes slideshow {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    30%  { opacity: 1; }
+    35%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+.navspan1{animation-delay: 0s;}
+.navspan2{animation-delay: 4s;}
+.navspan3{animation-delay: 8s;}
+
+.headline1
+{
+    padding-top: 15vh;
+    /* font-style:initial; */
+    /* font-style: italic; */
+    /* font-weight: 900; */
+    /* font-size: 3vh;opacity: 0.8; */
+    /* color: rgb(154, 25, 25);;; */
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+}
+.welcome1
+{
+    font-size: 8vh;
+    font-weight: 500;
+    color: black
+}
+.welcomespan1{
+    color: rgb(154, 25, 25);
+}
+.welcomequote1
+{
+    color: rgb(154, 25, 25);
+    font-style: italic;
+    font-size: 3vh;
+}
+.inputsdiv1{
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+    /* display: flex; */
+    /* justify-content:flex-start; */
+}
+.inputs1{
+    padding-left: 3vh;
+    border: 0.3vh solid rgb(194, 35, 35);
+    border-radius: 2vh;
+    font-style: italic;
+    /* padding-top: 3vh; */
+    /* size: 44vh; */
+    /* justify-content: space-between; */
+}
+input{
+    width: 66vh;
+    height: 7vh;
+}
+.signupbtn1{
+    border: 0.3vh solid rgb(194, 35, 35);
+    background-color: rgb(194, 35, 35);
+    border-radius: 2vh;
+    /* box-sizing: content-box; */
+    font-weight: 500;
+    font-size: 3vh;
+    /* padding-top: 3vh; */
+    width: 70vh;
+    height: 7vh;
 }
