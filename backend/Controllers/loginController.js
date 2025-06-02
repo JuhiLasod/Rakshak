@@ -5,12 +5,12 @@ const loginController=async(req,res)=>{
     const exist=await Users.findOne({email});
     if(!exist)
     {
-        return res.json("user does not exist");
+        return res.json("User does not exist!");
     }
     const newuser=await Users.findOne({email,password});
     if(!newuser)
     {
-        return res.json("invalid credentials");
+        return res.json("Invalid credentials!");
     }
     else{
         return res.json("login successfull");
