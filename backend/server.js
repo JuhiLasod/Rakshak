@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import loginRoutes from "./Routes/loginRoutes.js";
-
+import peopleRoutes from "./Routes/peopleRoutes.js";
 const app=express();
 dotenv.config();
 app.use(cors());
@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
 //     res.send("API running");
 // })
 app.use("/api/auth",loginRoutes);
-
+app.use("/api/people",peopleRoutes);
 app.listen(process.env.PORT,()=>{
     console.log("server running");
 })
