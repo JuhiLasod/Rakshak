@@ -4,6 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import loginRoutes from "./Routes/loginRoutes.js";
 import peopleRoutes from "./Routes/peopleRoutes.js";
+import alertRoutes from "./Routes/alertRoutes.js";
 const app=express();
 dotenv.config();
 app.use(cors());
@@ -18,6 +19,7 @@ mongoose.connect(process.env.MONGO_URI)
 // })
 app.use("/api/auth",loginRoutes);
 app.use("/api/people",peopleRoutes);
+app.use("/api/alert",alertRoutes);
 app.listen(process.env.PORT,()=>{
     console.log("server running");
 })
