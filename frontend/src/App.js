@@ -5,6 +5,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import ResetPass from "./components/ResetPass";
 import Home from "./components/Home";
+import MyPeople from "./components/MyPeople";
 function App() {
   return (
     <Routes>
@@ -13,6 +14,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/reset-password" element={<ResetPass/>}/>
       <Route path="/home" element={<Home/>}/>
+      <Route path="/my-people" element={<MyPeople/>}/>
     </Routes>
   );
 }

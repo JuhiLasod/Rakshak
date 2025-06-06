@@ -28,6 +28,7 @@ function Login(){
         setMessage(text);
         if(text==="login successfull")
         {
+            localStorage.setItem("email",email);
             navigate("/home");
         }
         setLoading(false);

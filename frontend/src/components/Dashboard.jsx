@@ -18,7 +18,7 @@ function Dashboard(){
               entry.target.classList.remove('visible'); // Remove when out of view
             }
           });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.2 });
       
         reveals.forEach(r => observer.observe(r));
       

@@ -271,7 +271,7 @@ html, body {
     /* animation: slideshow2 9s ; */
   }
   .reason1 ,.reason2 ,.reason3 ,.reason4,.reason {
-    opacity: 0;
+    opacity: 1;
     padding-block: 3vh;
     /* padding-bottom: 3vh; */
   }
@@ -279,24 +279,25 @@ html, body {
     color: rgb(249, 62, 62);
     font-style: oblique;
   }
-  .reason1.visible,.reason2.visible,.reason3.visible,.reason4.visible,.reason.visible{
+  /* .reason1.visible,.reason2.visible,.reason3.visible,.reason4.visible,.reason.visible{
     animation: slideshow2 9s forwards ;
     opacity: 0;
-  }
-  @keyframes slideshow2{
+  } */
+  /* @keyframes slideshow2{
     0% { opacity: 0; }
     5% { opacity: 0; }
     30% { opacity: 1; }
     35% { opacity: 1; }
     100% { opacity: 1; }
-  }
-  .reason1.visible {animation-delay: 1s;}
+  } */
+  /* .reason1.visible {animation-delay: 1s;}
   .reason2.visible {animation-delay: 2.5s;}
   .reason3.visible {animation-delay: 4s;}
   .reason4.visible {animation-delay: 5.5s;}
-  .reason.visible {animation-delay: 7s;}
+  .reason.visible {animation-delay: 7s;} */
 
   .lockimg{
     width: 90vh;
     height: 60vh;
+    border-radius: 35px;
   }
