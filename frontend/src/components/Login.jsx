@@ -18,18 +18,20 @@ function Login(){
     },[message]);
     const handleLogin=async()=>{
         setLoading(true);
-        console.log("ending "+email);
+        // console.log("ending "+email);
         const res=await fetch("http://localhost:8000/api/auth/login",{
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email,password})
         });
         const data=await res.json();
+        console.log("okay");
         setMessage(data.message);
         if(data.message==="Login successfull")
         {
             // console.log(data.message);
-            console.log(data.token);
+            console.log("token is");
+            // console.log(data.token);
             localStorage.setItem("token", data.token);
             navigate("/home");
         }

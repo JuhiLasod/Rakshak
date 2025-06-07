@@ -12,6 +12,7 @@ const loginController=async(req,res)=>{
         return res.json("User does not exist!");
     }
     const match=await bcrypt.compare(password,exist.password)
+    console.log(match);
     // const newuser=await Users.findOne({email,password});
     if(!match)
     {
@@ -19,6 +20,7 @@ const loginController=async(req,res)=>{
     }
     else{
         try{
+            console.log("inside try");
             const token = jwt.sign(
                 { id: exist._id, email: exist.email },
                 process.env.JWT_SECRET
@@ -29,7 +31,8 @@ const loginController=async(req,res)=>{
         catch(err)
         {
             console.log(err);
-            res.json({ error: "Login failed" });
+            console.log(err);
+            return res.json({ error: "Login failed" });
         }
         
     }
