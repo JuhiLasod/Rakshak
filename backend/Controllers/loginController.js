@@ -21,8 +21,7 @@ const loginController=async(req,res)=>{
         try{
             const token = jwt.sign(
                 { id: exist._id, email: exist.email },
-                process.env.JWT_SECRET,
-                { expiresIn: "1h" }
+                process.env.JWT_SECRET
             );
             console.log(token);
             return res.json({ message: "Login successfull", token });
