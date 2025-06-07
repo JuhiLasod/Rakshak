@@ -20,6 +20,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard/>}/>
+      {/* <Route path="/" element={<PrivateRoute><Dashboard/></PrivateRoute>}/> */}
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/reset-password" element={<ResetPass/>}/>

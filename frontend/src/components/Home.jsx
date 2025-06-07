@@ -5,6 +5,12 @@ function Home(){
     const navigate=useNavigate();
     const handlePeopleList=()=>{
         navigate("/my-people");
+    };
+    const handleLogput=async()=>{
+        localStorage.removeItem("token");
+        console.log("successfully logged out");
+        navigate("/");
+        // window.location.href = "/";
     }
     const handleAlert=async()=>{
         const res=await fetch("http://localhost:8000/api/alert/send-alert",{
@@ -19,6 +25,7 @@ function Home(){
         <div>
             <button onClick={handlePeopleList}>My people</button>
             <button onClick={handleAlert}>i need help</button>
+            <button onClick={handleLogput}>logout</button>
         </div>
     )
 }
