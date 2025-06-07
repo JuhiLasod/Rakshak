@@ -1,4 +1,8 @@
-import Users from "../Models/User.js"
+import Users from "../Models/User.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 const signUpController=async(req,res)=>{
     try{
         const {email,password}=req.body;
@@ -10,14 +14,17 @@ const signUpController=async(req,res)=>{
             res.json("user exists");
         }
         else{
-        const newUser= new Users({email,password});
-        await newUser.save();
-        res.json("sign up successfull")
+            const hashedPassword = await bcrypt.hash(password, 10);
+            const newUser= new Users({email,password:hashedPassword});
+            await newUser.save();
+            console.log("user saved");
+            res.json("sign up successfull")
         }
     }
     catch(err)
     {
-        res.send("failed");
+        console.log(err);
+        res.json("failed");
     }
     
     

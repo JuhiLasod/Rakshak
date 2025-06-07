@@ -24,12 +24,17 @@ function Login(){
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email,password})
         });
-        const text=await res.json();
-        setMessage(text);
-        if(text==="login successfull")
+        const data=await res.json();
+        setMessage(data.message);
+        if(data.message==="Login successfull")
         {
-            localStorage.setItem("email",email);
+            // console.log(data.message);
+            console.log(data.token);
+            localStorage.setItem("token", data.token);
             navigate("/home");
+        }
+        else{
+        console.log(data.error)
         }
         setLoading(false);
     }

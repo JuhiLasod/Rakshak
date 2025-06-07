@@ -39,8 +39,10 @@ function SignUp(){
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email,password})
         });
-        
-        setMessage(await res.json());
+        const text=await res.json()
+        setMessage(text);
+        if(text==="sign up successfull")
+        {
         Swal.fire({
             title: 'Kudos!',
             text: 'We have now become your RAKSHAK!',
@@ -52,6 +54,7 @@ function SignUp(){
               }
           });
           navigate("/");
+        }
         }
         setLoading(false);
         // console.log(message);
