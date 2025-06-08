@@ -1,0 +1,101 @@
+  
+.dash1Main{
+    width: 100vw;
+  }
+  
+    .dash1{
+      background-color: rgb(164, 159, 159);
+      display: flex;
+      /* justify-content: space-between; */
+      position: relative;
+      /* overflow-x: auto; */
+      /* padding-bottom: 20vh; */
+  
+    }
+    .dash1img
+    {
+      width: 110vh;
+      /* padding-left: 45vw; */
+      /* height: 200vh; */
+      display: flex;
+      z-index: 2;
+      
+    }
+    .left
+    {
+      padding-top: 23vh;
+      padding-left: 3.5vh;
+      padding-right: 3.5vh;
+      width: 52%;
+      
+    }
+    .head1{
+      font-size: 9vh;
+      padding-top: 10vh;
+      animation: slideInLeft 1s ease-out forwards;
+      animation-delay: 1s;
+      opacity: 0;
+      transform: translateX(0vh);
+      font-family: math;
+      overflow: hidden;
+      /* padding-bottom: 6vh; */
+    }
+    @keyframes slideInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(5vh);
+      }
+    }
+    
+    .safety{
+      color: rgb(194, 35, 35);
+      opacity: 3;
+    }
+    .line
+    {
+      transform: rotate(285deg);
+      width: 1%;
+      height: 360px;
+      background-color: rgb(194, 35, 35);
+      overflow: hidden;
+      z-index: 2;
+      position: absolute;
+      /* transform: translateX(100vh); */
+      /* transform-origin: -20vh; */
+      transform: translateY(-20vh);
+      /* font-style:oblique; */
+      
+      animation: slideInLeft2 1s ease-out forwards;
+  
+    }
+    @keyframes slideInLeft2 {
+      to {
+        opacity: 1;
+        transform: translateY(-5vh);
+        /* transform: translateX(100vh); */
+      }
+    }
+    .quote1
+    {
+      font-size: 4vh;
+      overflow: hidden;
+      color: rgb(0, 0, 0);;
+      animation: slideInBottom 1s ease-out forwards;
+      animation-delay: 2s;
+      padding-left: 5vh;
+      opacity: 0;
+      transform: translateY(10vh);
+      z-index: 1;
+      font-style: italic;
+    }
+    @keyframes slideInBottom
+    {
+      to{
+          opacity: 0.7;
+          transform: translateY(10vh);
+      }
+    }
+    .right
+    {
+      width: 48%;
+    }

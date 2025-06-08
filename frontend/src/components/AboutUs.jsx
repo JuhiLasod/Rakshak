@@ -28,7 +28,7 @@ function AboutUs(){
           }, []);
           
     return (
-        <div>
+        <div  className="aboutUsSection">
             {/* <Navbar/> */}
             <div className="dash2">
                             <div className="mix dash2img">

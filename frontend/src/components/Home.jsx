@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Dash1 from "./Dash1";
+import AboutUs from "./AboutUs";
 function Home(){
     const email=localStorage.getItem("email");
     const navigate=useNavigate();
@@ -26,6 +28,9 @@ function Home(){
             <button onClick={handlePeopleList}>My people</button>
             <button onClick={handleAlert}>i need help</button>
             <button onClick={handleLogput}>logout</button>
+            <Dash1/>
+            <AboutUs/>
+            
         </div>
     )
 }
