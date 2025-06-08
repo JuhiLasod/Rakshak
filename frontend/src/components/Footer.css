@@ -1,4 +1,69 @@
 .woodenbg{
     width: 100vw;
-    height: 100vh
+    height: 100vh;
+    opacity: 30%;
+    /* background-color: black; */
+}
+.footerud{
+    position: relative;
+    /* background-color: black; */
+}
+.divforbg{
+    background-color: rgb(0, 0, 0);
+    /* opacity: 70%; */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+}
+.rakshak_btn{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 10vh;
+    cursor: pointer;
+    color: #7a4b2e;
+}
+.rakshak_btn:hover{
+    color: #ab7655;
+}
+.login3{
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    font-size: 3.5vh;
+    cursor: pointer;
+    color: #766e6e;
+}
+.login3:hover{
+    color: white;
+}
+.signup3{
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    font-size: 3.5vh;
+    cursor: pointer;
+    color: #766e6e;
+}
+.signup3:hover{
+    color: white;
+}
+.developer{
+    width: 100vw;
+    height: 4vh;
+    background-color: rgb(59, 59, 59);
+    position: absolute;
+    top: 91%;
+    color: white;
+    /* align-content: center; */
+    /* align-items: center; */
+}
+.copyright{
+    width: 100vw;
+    height: 4vh;
+    position: absolute;
+    top: 95%;
+    background-color: rgb(142, 8, 8);;
 }
