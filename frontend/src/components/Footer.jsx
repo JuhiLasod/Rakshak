@@ -11,8 +11,8 @@ function Footer(){
                 <div className="divforbg"></div>
                 <img className="woodenbg" src={woodenbg} alt="woodenbg"/>
                 <div className="rakshak_btn" onClick={()=>window.scrollTo({top: 0, behavior: 'smooth' })}>RAKSHAK</div>
-                <div className="login3"> Sign in</div>
-                <div className="signup3"> Sign up</div>
+                <div className="login3" onClick={()=>navigate("/login")}> Sign in</div>
+                <div className="signup3" onClick={()=>navigate("/signup")}> Sign up</div>
                 
                 <div className="menu3">
                     <div className="inner3">Guide me</div> 

@@ -10,6 +10,8 @@ import MyPeople from "./components/MyPeople";
 import PrivateRoute from "./components/PrivateRoute";
 import AboutUs from "./components/AboutUs";
 import Layout from "./components/Layout";
+import LayoutIn from "./components/LayoutIn";
+import Dash1 from "./components/Dash1";
 // import Footer from "./components/Footer";
 function App() {
   const navigate=useNavigate();
@@ -28,9 +30,9 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/reset-password" element={<ResetPass/>}/>
       <Route path="/about-us" element={<Layout><AboutUs/></Layout>}/>
-      <Route path="/home" element={<Layout><PrivateRoute><Home/></PrivateRoute></Layout>}/>
+      <Route path="/home" element={<LayoutIn><PrivateRoute><Home/></PrivateRoute></LayoutIn>}/>
       <Route path="/my-people" element={<MyPeople/>}/>
-      {/* <Route path="/footer" element={<Footer/>}/> */}
+      <Route path="/dash1" element={<Dash1/>}/>
     </Routes>
   );
 }

@@ -1,4 +1,13 @@
- 
+  /* .aboutUsSection{
+    position: relative;
+
+  } */
+   .dash2 {
+    background-color: black;
+    position: relative;
+    height: 130vh;
+    overflow: hidden;
+  }
   .dash2img img {
     height: 100%;
     width: 100%;
