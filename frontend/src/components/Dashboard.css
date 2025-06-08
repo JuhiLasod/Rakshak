@@ -4,6 +4,9 @@ html, body {
     background-color: rgb(164, 159, 159);
   }
   
+.dash1Main{
+  width: 100vw;
+}
 .Navbar
 {
     padding: 1vh;
