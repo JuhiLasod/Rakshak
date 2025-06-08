@@ -5,6 +5,9 @@ import woman2 from "../components/woman2.png";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 function Dashboard(){
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    //   }, []);
     //for frontend reveal krne pr visible hone wala animation
     useEffect(() => {
         const reveals = document.querySelectorAll('.reveal');
