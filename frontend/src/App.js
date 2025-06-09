@@ -27,7 +27,8 @@ function App() {
   },[navigate, token, location.pathname]);
   return (
     <Routes>
-      <Route path="/" element={<Layout><Dashboard/></Layout>}/>
+      {/* <Route path="/" element={<Layout><Dashboard/></Layout>}/> */}
+      <Route path="/" element={token ?<LayoutIn><PrivateRoute><Home/></PrivateRoute></LayoutIn> : <Layout><Dashboard/></Layout>}/>
       {/* <Route path="/" element={<PrivateRoute><Dashboard/></PrivateRoute>}/> */}
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/login" element={<Login/>}/>
