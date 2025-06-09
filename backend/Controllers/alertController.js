@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 dotenv.config();
 const alertController=async(req,res)=>{
-    const {email}=req.body;
+    const {email,em}=req.body;
     // const pmails=[];
     const user=await MyPeople.findOne({email});
     // console.log(user);
@@ -20,7 +20,7 @@ const alertController=async(req,res)=>{
         }
     });
 
-    
+    if(em==='0'){
         await transporter.sendMail({
             from: process.env.MAIL_ID,
             to: pmails,
@@ -39,7 +39,28 @@ Thank you for standing by those in need.
 Warm regards,
 Team RAKSHAK
 Empowering Safety. Enabling Response.`
-        });
+        });}
+        else
+        {await transporter.sendMail({
+            from: process.env.MAIL_ID,
+            to: pmails,
+            subject: `Alert from RAKSHAK: Monitoring Recommended for ${email}`,
+            text: `You are receiving this important notification from RAKSHAK regarding a potential safety concern associated with ${email}.
+
+This individual has entered an area identified as potentially unsafe. While they may not be in immediate danger, the situation could change, and your awareness and readiness to assist may become crucial.
+
+Please keep an eye on the following location:
+
+{link}
+
+Your vigilance could play a vital role in ensuring their well-being.
+
+Thank you for being a part of the RAKSHAK community —
+Empowering Safety. Enabling Response.
+
+Warm regards,
+Team RAKSHAK`
+        });}
     
     return res.json("mails sent");
     }

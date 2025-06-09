@@ -8,17 +8,13 @@ function Home(){
     const handlePeopleList=()=>{
         navigate("/my-people");
     };
-    const handleLogput=async()=>{
-        localStorage.removeItem("token");
-        console.log("successfully logged out");
-        navigate("/");
-        // window.location.href = "/";
-    }
+
     const handleAlert=async()=>{
+        const em='0';
         const res=await fetch("http://localhost:8000/api/alert/send-alert",{
             method:"POST",
             headers: {"Content-Type":"application/json"},
-            body: JSON.stringify({email})
+            body: JSON.stringify({email,em})
         });
         const text=await res.json();
         window.alert(text);
@@ -27,7 +23,7 @@ function Home(){
         <div>
             <button onClick={handlePeopleList}>My people</button>
             <button onClick={handleAlert}>i need help</button>
-            <button onClick={handleLogput}>logout</button>
+            
             <Dash1/>
             <AboutUs/>
             

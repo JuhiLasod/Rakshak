@@ -13,6 +13,7 @@ import Layout from "./components/Layout";
 import LayoutIn from "./components/LayoutIn";
 import Dash1 from "./components/Dash1";
 import Donate from "./components/Donate";
+import MyProfile from "./components/MyProfile";
 // import Footer from "./components/Footer";
 function App() {
   const navigate=useNavigate();
@@ -39,6 +40,7 @@ function App() {
       <Route path="/dash1" element={<Dash1/>}/>
       <Route path="/about-us" element={token ?<LayoutIn><AboutUs/></LayoutIn> : <Layout><AboutUs/></Layout>}/>
       <Route path="/donate" element={token ?<LayoutIn><Donate/></LayoutIn> : <Layout><Donate/></Layout>}/>
+      <Route path="/my-profile" element={<LayoutIn><MyProfile/></LayoutIn>}/>
 
       
     </Routes>

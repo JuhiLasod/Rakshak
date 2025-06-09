@@ -14,7 +14,7 @@ function NavbarIn(){
                 <button className="navbtn" onClick={()=>navigate("/donate")}><span>Donate</span></button>
                 <button className="navbtn"><span>Future Goals</span></button>
                 <button className="navbtn"><span>Contact us</span></button>
-                <button className="navbtn"><span>My Profile</span></button>
+                <button className="navbtn" onClick={()=>navigate("/my-profile")}><span>My Profile</span></button>
                 {/* <button className="navbtn"><span>send alert</span></button> */}
         </div>
     );
