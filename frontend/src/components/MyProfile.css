@@ -93,11 +93,15 @@
 .btndiv5 button{
     width: 24vh;
     height: 6vh;
-    background-color: rgb(194, 35, 35);
+    background-color: rgb(222, 28, 28);
     border-radius: 10px;
     border-width: 0px;
-    border-color: rgb(194, 35, 35);
+    border-color: rgb(228, 33, 33);
     /* justify-content: space-between; */
     font-size: 2.5vh;
     /* padding-left: 2vh; */
+}
+.btndiv5 button:hover{
+  background-color: rgb(160, 6, 6);
+  color: rgb(177, 175, 175);
 }
