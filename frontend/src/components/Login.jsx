@@ -33,6 +33,7 @@ function Login(){
             console.log("token is");
             // console.log(data.token);
             localStorage.setItem("token", data.token);
+            localStorage.setItem("email",email);
             navigate("/home");
         }
         else{
