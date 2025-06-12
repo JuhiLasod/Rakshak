@@ -95,3 +95,86 @@
         opacity: 1;
     }
 }
+.rate36
+{
+    background-color: black;
+}
+.logo6{
+    width: 100vw;
+    opacity: 0.1;
+    /* height: 60vh; */
+    /* display: flex; */
+    position: relative;
+}
+.btns6
+{
+    position: absolute;
+    top: 200%;
+    left: 0%;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.ratebtn6
+{
+    /* padding-bottom: 4vh; */
+    /* padding-left: 4vh; */
+    /* height: 5vh; */
+    background-color: rgb(194, 34, 34);
+    border: 2px solid aliceblue;   /* Combines border-color and border-width */
+    border-radius: 12px;
+    cursor: pointer;
+    width: 8vw;
+    height: 15vh;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+.ratebtn6.disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.reset6{
+    position: absolute;
+    top: 210%;
+    left: 0%;
+    background-color: white;
+}
+.current6
+{
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    font-size: 5vh;
+    font-style: math;
+    top: 240%;
+    left: 0%;
+    color: white;
+}
+.message6
+{
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    font-size: 5vh;
+    font-style: italic;
+
+    /* font-style: math; */
+    top: 230%;
+    left: 0%;
+    color: rgb(194, 34, 34);
+}
