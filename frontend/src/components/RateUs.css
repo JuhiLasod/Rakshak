@@ -1,0 +1,97 @@
+.rateus6
+{
+    background-color: white;
+}
+.rate16{
+    display: flex;
+}
+.rateleft6
+{
+    width: 60%;
+}
+.rateright6
+{
+    width: 35%;
+    padding: 3vh;
+}
+.rate1img6
+{
+    max-width: 100%;
+    max-height: 90vh;
+}
+.rateright6{
+    font-size: 6vh;
+    /* font-family: math; */
+    font-style: italic;
+    padding-top: 5vh;
+    color: rgb(133, 126, 126);
+    /* opacity: 0.2; */
+}
+.rateright6.visible{
+    animation:  2s slideIn6 forwards;
+}
+@keyframes slideIn6{
+    from{
+        transform: translateX(40vh);
+        opacity: 0;
+    }to{
+        transform: translateX(0vh);
+        opacity: 1;
+    }
+}
+.raterightspan6{
+    color: rgb(194, 35, 35);
+    font-size: 12vh;
+    font-weight: 300;
+    font-style: normal;
+}
+.desc6{
+    font-size: 4vh;
+    font-style: normal;
+    font-family: math;
+    padding-top: 15vh;
+    color: rgb(116, 16, 16);
+}
+.rate26
+{
+    background-color: black;
+    display: flex;
+}
+.rate2img6
+{
+    /* position: absolute; */
+    height: 90vh;
+    width: 100vw;
+    opacity: 0.3;
+}
+.rate2text6
+{
+    width: 100%;
+    position: absolute;
+    top: 120%;
+    color: rgb(194, 35, 35);
+    font-size: 10vh;
+    justify-content: center;
+    text-align: center;
+    
+}
+.context26{
+    text-align: center;
+    font-style: italic;
+    font-size: 5vh;
+    /* color: rgb(194, 35, 35); */
+    color: white;
+}
+.rate2text6.visible{
+    /* animation: 4s textanimation forwards; */
+    animation:  2s slideIn6 forwards;
+    
+}
+@keyframes textanimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
