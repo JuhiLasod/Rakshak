@@ -4,16 +4,16 @@ const rateController=async(req,res)=>{
     const {email,star}=req.body;
     try{
     const exist=await Rates.findOne({email});
-    console.log(req.body);
+    // console.log(req.body);
     if(exist)
     {
-        console.log("found");
+        // console.log("found");
         await Rates.findOneAndUpdate({ email: email },
             { $set: { star: star } });
     }
     else
     {
-        console.log("not found");
+        // console.log("not found");
         const newRating= new Rates({email,star});
         await newRating.save();
     }
