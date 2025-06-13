@@ -22,9 +22,11 @@ function Footer(){
                     <div className="inner3" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
                                                             navigate("/about-us")}}>About us</div>
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                     <div className="inner3">Rate us</div> 
+                     <div className="inner3" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
+                                                            navigate("/rate-us")}}>Rate us</div> 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                     <div className="inner3">Contact us</div> 
+                     <div className="inner3" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
+                                                            navigate("/contact-us")}}>Contact us</div> 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                      <div className="inner3" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });
                                                             navigate("/donate")}}>Donate</div>

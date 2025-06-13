@@ -22,7 +22,7 @@
 }
 .content7{
     font-size: 4vh;
-    /* font-weight: 100; */
+    font-weight: 10;
     font-family: math;
     padding-top: 5vh;
 }
@@ -61,4 +61,11 @@
 .card7:hover{
     height: 11vw;
     
+}
+.card7span{
+    color: rgb(226, 90, 90);
+}
+.card7span2{
+    color: rgb(116, 6, 6);
+    font-style: italic;
 }

@@ -12,8 +12,12 @@ function ContactUs(){
                 <img className="img7" src={contact} alt="contactimg" />
             </div>
             <div className="cardout7">
-                <div className="card7">☎️<br/><br/>We are eager to hear from you. <br/><br/>Call us at 89087655433</div>
-                <div className="card7">📩<br/><br/>We can connect through mail as well. <br/><br/>Send us mail at vhjkMail</div>
+                <div className="card7">☎️<br/><br/>We are eager to hear from you. <br/><br/><span className="card7span">Call us at <a href="tel:+919876543210" className="card7span2">
+      +91 98765 43210
+    </a></span></div>
+                <div className="card7">📩<br/><br/>We can connect through mail as well. <br/><br/><span className="card7span">Send us mail at <a href="mailto:rakshak_official@gmail.com" className="card7span2">
+      rakshak_official@gmail.com
+    </a></span></div>
             </div>
         </div>
     )
