@@ -12,6 +12,9 @@
     margin-left: 4vw;
     margin-right: 4vw;
 }
+.logo:hover{
+  cursor: pointer;
+}
 .navbtn {
     position: relative;
     overflow: hidden;

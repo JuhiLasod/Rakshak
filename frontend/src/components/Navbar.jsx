@@ -12,7 +12,7 @@ function Navbar(){
     };
     return (
         <div className="Navbar">
-                <img className="logo" src={logo} alt="logo"/>
+                <img className="logo" onClick={navigate("/")}src={logo} alt="logo"/>
                 <button className="navbtn"><span>Guide Me</span></button>
                 <button className="navbtn" onClick={()=>navigate("/about-us")}><span>About Rakshak</span></button>
                 <button className="navbtn"><span>Rate us</span></button>
