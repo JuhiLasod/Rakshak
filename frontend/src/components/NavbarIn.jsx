@@ -8,7 +8,7 @@ function NavbarIn(){
     return (
         <div className="Navbar">
                 <img className="logo"  onClick={()=>navigate("/")}src={logo} alt="logo"/>
-                <button className="navbtn"><span>Guide Me</span></button>
+                <button className="navbtn" onClick={()=>navigate("/guide-me")}><span>Guide Me</span></button>
                 <button className="navbtn" onClick={()=>navigate("/about-us")}><span>About Rakshak</span></button>
                 <button className="navbtn" onClick={()=>navigate("/rate-us")}><span>Rate us</span></button>
                 <button className="navbtn" onClick={()=>navigate("/donate")}><span>Donate</span></button>
