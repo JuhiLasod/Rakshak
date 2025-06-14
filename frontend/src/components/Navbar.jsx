@@ -13,7 +13,8 @@ function Navbar(){
     return (
         <div className="Navbar">
                 <img className="logo" onClick={()=>navigate("/")}src={logo} alt="logo"/>
-                <button className="navbtn"><span>Guide Me</span></button>
+                <button className="navbtn" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
+                                                            navigate("/guide-me")}}><span>Guide Me</span></button>
                 <button className="navbtn" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
                                                             navigate("/about-us")}}><span>About Rakshak</span></button>
                 <button className="navbtn" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })

@@ -16,6 +16,7 @@ import Donate from "./components/Donate";
 import MyProfile from "./components/MyProfile";
 import RateUs from "./components/RateUs";
 import ContactUs from "./components/ContactUs";
+import GuideMe from "./components/GuideMe";
 // import Footer from "./components/Footer";
 function App() {
   const navigate=useNavigate();
@@ -45,7 +46,7 @@ function App() {
       <Route path="/my-profile" element={<LayoutIn><MyProfile/></LayoutIn>}/>
       <Route path="/rate-us" element={<LayoutIn><RateUs/></LayoutIn>}/>
       <Route path="/contact-us" element={token ?<LayoutIn><ContactUs/></LayoutIn> : <Layout><ContactUs/></Layout>}/>
-      
+      <Route path="/guide-me" element={token ?<LayoutIn><GuideMe/></LayoutIn> : <Layout><GuideMe/></Layout>}/>
     </Routes>
   );
 }
