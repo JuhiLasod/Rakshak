@@ -1,0 +1,66 @@
+/* import homemyp from "./homemyp.png"; */
+
+/* .outer9 { */
+    /* position: relative;
+    width: 100%; /* or fixed width like 400px */
+    /* height: 2vh; adjust as needed */
+    /* background-image: {homemyp}; or use homemyp if imported */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: flex-end; */
+    /* padding-top: 40vh; */
+    /* padding-right: 20vw; */
+  /* } */ 
+  
+  .left9 {
+    /* padding: 10px 20px; */
+    width: 10vw;
+    height: 5vh;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    position: absolute;
+    top: 10%;
+    
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    cursor: pointer;
+  }
+  .right9{
+    height: 15vh;
+    width: 100vw; 
+    /* /* border-radius: 50%; */
+    border: 0px; 
+    /* padding: 15px 30px; */
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    /* justify-items: center; */
+    /* align-items: center; */
+    animation: 2s colorchange alternate infinite;
+    font-size: 6vh;
+  }
+  .right9:hover{
+    cursor: pointer;
+  }
+  .right9:disabled{
+    background-color: rgb(95, 95, 95);
+    color: rgb(95, 95, 95); 
+     /* animation: none;  */
+    animation-play-state: paused;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  @keyframes colorchange{
+    from{
+        background-color: black;
+        color: rgb(255, 255, 255);
+    }
+    to{
+        
+        background-color: rgba(255, 0, 0, 1);
+        color: rgb(0, 0, 0);
+    }
+  }
+  
