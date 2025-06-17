@@ -1,103 +1,71 @@
-  /* .aboutUsSection{
-    position: relative;
+import React from "react";
+import { useEffect } from "react";
+// import Navbar from "./Navbar";
+import "./AboutUs.css";
+import dash2img from "../components/dash2.png";
+import lockimg from "../components/lockimg.png";
 
-  } */
-   .dash2 {
-    background-color: black;
-    position: relative;
-    height: 130vh;
-    overflow: hidden;
-  }
-  .dash2img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.2;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding-left: 4vh;
-    /* padding: 8vh; */
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  
-  .head2 {
-    color: rgb(194, 35, 35);
-    font-size: 15vh;
-    /* font-style: oblique; */
-    font-family: math;
-    opacity: 0;
-    width: 45%;
-    transform: translateX(-50vh);
-  }
-  
-  .head2.visible {
-    animation: dash2head 1s ease-out forwards;
-    animation-delay: 0s;
-  }
-  
-  @keyframes dash2head {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  .reveal {
-    opacity: 0;
-  }
-  .reveal.visible {
-    opacity: 1;
-  }
-  .dash2content {
-    color: rgb(255, 255, 255);
-    font-size: 4vh;
-    /* font-style: oblique; */
-    padding-left: 4vh;
-    width: 45%;
-    /* justify-content: space-between; */
-    /* opacity: 0; */
-    /* animation: slideshow2 9s ; */
-  }
-  .reason1 ,.reason2 ,.reason3 ,.reason4,.reason {
-    opacity: 1;
-    padding-block: 3vh;
-    /* padding-bottom: 3vh; */
-  }
-  .reason{
-    color: rgb(249, 62, 62);
-    font-style: oblique;
-  }
-  /* .reason1.visible,.reason2.visible,.reason3.visible,.reason4.visible,.reason.visible{
-    animation: slideshow2 9s forwards ;
-    opacity: 0;
-  } */
-  /* @keyframes slideshow2{
-    0% { opacity: 0; }
-    5% { opacity: 0; }
-    30% { opacity: 1; }
-    35% { opacity: 1; }
-    100% { opacity: 1; }
-  } */
-  /* .reason1.visible {animation-delay: 1s;}
-  .reason2.visible {animation-delay: 2.5s;}
-  .reason3.visible {animation-delay: 4s;}
-  .reason4.visible {animation-delay: 5.5s;}
-  .reason.visible {animation-delay: 7s;} */
-
-  .lockimg{
-    width: 90vh;
-    height: 60vh;
-    border-radius: 35px;
-  }
+function AboutUs(){
+    useEffect(() => {
+            const reveals = document.querySelectorAll('.reveal');
+          
+            const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                } else {
+                  entry.target.classList.remove('visible'); // Remove when out of view
+                }
+              });
+            }, { threshold: 0.2 });
+          
+            reveals.forEach(r => observer.observe(r));
+          
+            return () => observer.disconnect();
+          }, []);
+          useEffect(() => {
+            window.scrollTo(0, 0); 
+          }, []);
+          
+    return (
+        <div  className="aboutUsSection">
+            {/* <Navbar/> */}
+            <div className="dash2">
+                            <div className="mix dash2img">
+                                <img src={dash2img} alt="globe" />
+                            </div>
+            
+                            <div className="container">
+                                <div className="mix head2 reveal">
+                                    What we offer
+                                    <img className="lockimg" src={lockimg} alt="our services"/>
+                                </div>
+                                <div className="dash2content">
+                                    <div className="reason1 reveal">
+                                        ◇ Rakshak isn’t just a platform — it’s your digital shield, dedicated to your safety, every second, everywhere.
+                                    </div >
+                                    {/* <br/> */}
+                                    <div className="reason2 reveal">
+                                        ◇ Instantly share your live location with trusted contacts during emergencies for faster assistance.
+                                    </div>
+                                
+                                    {/* <br/> */}
+                                    <div className="reason3 reveal">
+                                        ◇ Send a distress alert with just one click, enabling immediate support when every second counts.
+                                    </div>
+                                    
+                                    {/* <br/> */}
+                                    <div className="reason4 reveal">
+                                        ◇ Access emergency funds through a transparent, donation-based system that connects those in need with those willing to help.
+                                    </div>
+                                    
+                                    <div className="reason reveal">
+                                        Because your safety deserves more than chance — it deserves Rakshak.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    )
+}
+export default AboutUs;

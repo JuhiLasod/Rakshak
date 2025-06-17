@@ -20,7 +20,7 @@ const sendOtpController=async(req,res)=>{
                 pass: process.env.PASSWORD
             }
         });
-        const options={
+        const options={ 
             from: process.env.MAIL_ID,
             to: email,
             subject: "Reset password for RAKSHAK",
