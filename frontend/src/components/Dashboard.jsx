@@ -10,6 +10,7 @@ function Dashboard(){
             <div>
             <Dash1/>
             <AboutUs/>
+            
             <div/>
         </div>
     );
