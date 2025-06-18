@@ -1,0 +1,242 @@
+.signin2 {
+    background-color: #e3e3e3;
+    overflow: hidden;
+}
+
+.loginImg2 {
+    width: 75vh;
+}
+
+.overall2 {
+    display: flex;
+    height: 87vh;
+}
+
+.right2 {
+    padding-top: 15vh;
+    width: 50%;
+    height: 85vh;
+}
+
+.left2 {
+    width: 60%;
+    padding-left: 3vh;
+    height: 70vh;
+}
+
+.nav2 {
+    background-color: white;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo2 {
+    padding-left: 10vh;
+    padding-top: 1.5vh;
+    height: 10vh;
+}
+
+.logodiv2:hover {
+    cursor: pointer;
+}
+
+.navspan_2 {
+    padding-left: 149vh;
+    color: rgb(194, 35, 35);
+    justify-content: end;
+    font-size: 5vh;
+    font-style: italic;
+    padding-top: 3vh;
+    opacity: 0;
+    animation: slideshow 9s infinite;
+    position: absolute;
+}
+
+@keyframes slideshow {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    30% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.navspan21 { animation-delay: 0s; }
+.navspan22 { animation-delay: 3s; }
+.navspan23 { animation-delay: 6s; }
+
+.headline2 {
+    padding-top: 10vh;
+}
+
+.welcome2 {
+    font-size: 8vh;
+    font-weight: 500;
+    color: black;
+}
+
+.welcomespan2 {
+    color: rgb(194, 35, 35);
+}
+
+.welcomequote2 {
+    color: rgb(154, 25, 25);
+    font-style: italic;
+    font-size: 3vh;
+}
+
+.inputsdiv2 {
+    padding-bottom: 3vh;
+    padding-top: 10vh;
+}
+
+.inputs2 {
+    padding-left: 3vh;
+    border: 0.3vh solid rgb(194, 35, 35);
+    border-radius: 2vh;
+    font-style: italic;
+}
+
+input {
+    width: 66vh;
+    height: 7vh;
+}
+
+.signinbtn2 {
+    border: 0.3vh solid rgb(194, 35, 35);
+    background-color: rgb(194, 35, 35);
+    border-radius: 2vh;
+    font-weight: 500;
+    font-size: 3vh;
+    width: 70vh;
+    height: 7vh;
+}
+
+.security2 {
+    opacity: 0.5;
+    padding-top: 5vh;
+}
+
+.message2 {
+    font-size: 3vh;
+    color: rgb(194, 35, 35);
+}
+
+.my-confirm-btn2 {
+    background-color: rgb(194, 35, 35);
+}
+
+.my-confirm-btn1:hover {
+    background-color: rgb(138, 130, 128);
+}
+
+.alerttitle2 {
+    color: rgb(194, 35, 35);
+}
+
+.fp2
+{
+    color: rgb(194, 35, 35);
+    padding-bottom: 2vh;
+    /* justify-content: end; */
+    width: 20vh;
+}
+.fp2:hover{
+    color: black;
+    cursor: pointer;
+}
+/* ===== Responsive Styles ===== */
+@media (max-width: 1024px) {
+    .overall2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .right2, .left2 {
+        width: 100%;
+        height: auto;
+        padding: 2vh;
+    }
+
+    .loginImg2 {
+        width: 90vw;
+        max-width: 100%;
+        height: auto;
+    }
+
+    input {
+        width: 90vw;
+    }
+
+    .signinbtn2 {
+        width: 90vw;
+    }
+
+    .logo2 {
+        padding-left: 3vh;
+        padding-top: 2vh;
+        height: 7vh;
+    }
+
+    .navspan_2 {
+        padding-left: 0;
+        font-size: 3.5vh;
+        position: static;
+        text-align: center;
+        margin-top: 1vh;
+    }
+
+    .welcome2 {
+        font-size: 5vh;
+    }
+
+    .welcomequote2 {
+        font-size: 2.5vh;
+    }
+
+    .inputsdiv2 {
+        padding-top: 5vh;
+    }
+
+    .message2 {
+        font-size: 2.5vh;
+    }
+
+    .fp2 {
+        width: 30vh;
+        font-size: 2.2vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .welcome2 {
+        font-size: 4vh;
+    }
+
+    .welcomequote2 {
+        font-size: 2vh;
+    }
+
+    .signinbtn2, input {
+        height: 6vh;
+        font-size: 2vh;
+    }
+
+    .logo2 {
+        height: 6vh;
+    }
+
+    .navspan_2 {
+        font-size: 3vh;
+    }
+
+    .message2 {
+        font-size: 2vh;
+    }
+
+    .fp2 {
+        width: 40vh;
+        font-size: 2vh;
+        /* text-align: right; Optional: aligns "Forgot Password" to the right on small screens */
+    }
+}
