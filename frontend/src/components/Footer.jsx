@@ -17,7 +17,8 @@ function Footer(){
                 <div className="signup3" onClick={()=>navigate("/signup")}> Sign up</div>
                 
                 <div className="menu3">
-                    <div className="inner3">Guide me</div> 
+                    <div className="inner3" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
+                                                            navigate("/guide-me")}}>Guide me</div> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     <div className="inner3" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
                                                             navigate("/about-us")}}>About us</div>
@@ -42,7 +43,9 @@ function Footer(){
                      <div className="innernext3">SiteMap</div> 
                      
                  </div>
-                <div className="developer">This website id developed by Juhi Lasod</div>
+                <a href="https://www.linkedin.com/in/juhi-lasod-bb7295257">
+                    <div className="developer" >This website id developed by Juhi Lasod</div>
+                </a>
                 <div className="copyright">copyright © 2025 Rakshak . All rights reserved.</div>
             </div>
             
