@@ -30,8 +30,8 @@ function Footer(){
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                      <div className="inner3" onClick={()=>{window.scrollTo({ top: 0, behavior: 'smooth' });
                                                             navigate("/donate")}}>Donate</div>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                     <div className="inner3">Future goals</div>
+                     {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  */}
+                     {/* <div className="inner3">Future goals</div> */}
                  </div>
 
                  <div className="menunext3">
