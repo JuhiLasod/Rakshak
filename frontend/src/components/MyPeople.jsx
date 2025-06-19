@@ -9,7 +9,7 @@ function MyPeople()
     const [name,setName]=useState('');
     const [pmail,setPmail]=useState('');
     const fetchPeople=useCallback( async()=>{
-        const res=await fetch("http://localhost:8000/api/people/my-people",{
+        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/people/my-people",{
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email})
@@ -39,7 +39,7 @@ function MyPeople()
         // setPeople(list);
     }
     const handleAdd2=async()=>{
-        const res=await fetch("http://localhost:8000/api/people/add-people",{
+        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/people/add-people",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({email,name,pmail})
@@ -53,7 +53,7 @@ function MyPeople()
         setEdit(false);
     }
     const handleDelete=async(pmail)=>{
-        const res=await fetch("http://localhost:8000/api/people/delete-people",{
+        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/people/delete-people",{
             method:"POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email,pmail})
