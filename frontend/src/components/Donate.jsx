@@ -34,7 +34,7 @@ function Donate(){
         }
         else{
             setLoading(true);
-        const res=await fetch("http://localhost:8000/api/all/qr",{
+        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/all/qr",{
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({am})

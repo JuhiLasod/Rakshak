@@ -28,7 +28,7 @@ function RateUs(){
         const [curr,setCurr]=useState('');
         const findStar=useCallback(async()=>{
             // console.log("from findstar"+email);
-            const res=await fetch("http://localhost:8000/api/all/find-rate",{
+            const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/all/find-rate",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body: JSON.stringify({email})
@@ -49,7 +49,7 @@ function RateUs(){
         const handlestar=async(star)=>{
             // setStar(e);
             // console.log(star);
-            const res=await fetch("http://localhost:8000/api/all/rate-us",{
+            const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/all/rate-us",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body: JSON.stringify({email,star})

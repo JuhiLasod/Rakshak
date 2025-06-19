@@ -27,7 +27,7 @@ function ResetPass() {
 
     const handleSendOtp = async () => {
         // const res = await fetch("http://localhost:8000/api/auth/sendotp", {
-            const res = await fetch("http://localhost:8000/api/auth/send-otp", {
+            const res = await fetch("https://rakshak-backend-dqut.onrender.com/api/auth/send-otp", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email })
@@ -70,7 +70,7 @@ function ResetPass() {
     };
 
     const handleVerify = async () => {
-        const res = await fetch("http://localhost:8000/api/auth/verifyotp", {
+        const res = await fetch("https://rakshak-backend-dqut.onrender.com/api/auth/verifyotp", {
         // const res = await fetch("https://login-page-9.onrender.com/api/auth/verifyotp", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -98,7 +98,7 @@ function ResetPass() {
         if (newpass !== confirmpass) {
             setResetres("Passwords do not match");
         } else {
-            const res = await fetch("http://localhost:8000/api/auth/resetpass", {
+            const res = await fetch("https://rakshak-backend-dqut.onrender.com/api/auth/resetpass", {
                 // const res = await fetch("https://login-page-9.onrender.com/api/auth/resetpass", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

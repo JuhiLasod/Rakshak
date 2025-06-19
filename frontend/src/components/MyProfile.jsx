@@ -23,7 +23,7 @@ function MyProfile(){
     const handleAlert=async()=>{
         setLoading(true);
         const em='1';
-        const res=await fetch("http://localhost:8000/api/alert/send-alert",{
+        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert",{
             method:"POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({email,em})

@@ -11,7 +11,7 @@ const app=express();
 dotenv.config();
 // app.use(cors());
 app.use(cors({
-  origin: "https://rakshak.onrender.com", 
+  origin: "https://rakshak-j5xq.onrender.com", 
   credentials: true
 }));
 app.use(express.json());
