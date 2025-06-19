@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e36b42e4.css",
+    "main.js": "/static/js/main.a01fa205.js",
+    "static/media/securityvd.mp4": "/static/media/securityvd.ec82e898e3955ae62922.mp4",
+    "static/media/woodenbg.png": "/static/media/woodenbg.7132079214bb8d60b664.png",
+    "static/media/myp1.png": "/static/media/myp1.e08097fce3959dd537fe.png",
+    "static/media/myp2.png": "/static/media/myp2.023eed2cf249a0114b3f.png",
+    "static/media/myp3.png": "/static/media/myp3.586e8ae07e735b3e8ab4.png",
+    "static/media/loginImg.png": "/static/media/loginImg.e6a11130cabb34372f1d.png",
+    "static/media/lockimg.png": "/static/media/lockimg.bc3a9fa3e89d00f43780.png",
+    "static/media/dash2.png": "/static/media/dash2.5d55edea8079ef47f355.png",
+    "static/media/woman2.png": "/static/media/woman2.851cbd5aad81906db893.png",
+    "static/media/rate2.png": "/static/media/rate2.4b700b6792f90e8aee0d.png",
+    "static/media/gmlogin.png": "/static/media/gmlogin.e12bf798b8c69b4e0222.png",
+    "static/media/contact.png": "/static/media/contact.5dffca7274408d5b25e9.png",
+    "static/media/donate.png": "/static/media/donate.4f2ffa940b8694535d02.png",
+    "static/media/rate1.png": "/static/media/rate1.4cd64f60abf0452013a8.png",
+    "static/media/mypimg.png": "/static/media/mypimg.09e41dfa6503748fd527.png",
+    "static/media/logo.jpg": "/static/media/logo.7355d4ec4fddefe75b11.jpg",
+    "index.html": "/index.html",
+    "main.e36b42e4.css.map": "/static/css/main.e36b42e4.css.map",
+    "main.a01fa205.js.map": "/static/js/main.a01fa205.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e36b42e4.css",
+    "static/js/main.a01fa205.js"
+  ]
+}

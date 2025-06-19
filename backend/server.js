@@ -6,9 +6,14 @@ import loginRoutes from "./Routes/loginRoutes.js";
 import peopleRoutes from "./Routes/peopleRoutes.js";
 import alertRoutes from "./Routes/alertRoutes.js";
 import allRoutes from "./Routes/allRoutes.js";
+
 const app=express();
 dotenv.config();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "https://rakshak.onrender.com", 
+  credentials: true
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
