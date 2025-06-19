@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
+import mypimg from './mypimg.png';
+import "./MyPeople.css";
 function MyPeople()
 {
     const email=localStorage.getItem("email");
@@ -61,36 +63,50 @@ function MyPeople()
         fetchPeople();
     }
     return (
-        <div>
-            my people page
-            <div>
-            <h2>People List</h2>
-            <ul>
-                {people.map((person, index) => (
-                    <li key={index}>
-                        {person.name} - {person.pmail}
-                        {(edit) && (<button onClick={()=>handleDelete(person.pmail)}>delete</button>)}
-                    </li>
-                ))}
-            </ul>
+        <div className="outer11">
+            <div className="whole11">
+                <div className="left11">
+                    <div className="head11">
+                        Your safety net isn't woven with threads, but with people who care. Choose them wisely.
+                    </div>
+                    <div className="btndiv11">
+                        <button className="update11" onClick={handleAdd}>Update My People</button>
+                    </div>
+                    
+                    <ul>
+                    {people.map((person, index) => (
+                        <li key={index}>
+                            {person.name} - {person.pmail}
+                            {(edit) && (<button className="allbtn11" onClick={()=>handleDelete(person.pmail)}>Delete</button>)}
+                        </li>
+                    ))}
+                     </ul>
+                </div>
+                <div className="right11">
+                    <img className="img11" src={mypimg} alt="people"/>
+                </div>
+            
             </div>
             
-            <button onClick={handleAdd}>update my people</button>
-            <div>
+            
+            <div className="input11">
                 {(edit) && 
                     (<div>
-                        <input
-                            type="email"
-                            value={pmail}
-                            onChange={(e)=>{setPmail(e.target.value)}}
-                        />
-                        <input
+                        <input className="inp11"
                             type="string"
                             value={name}
+                            placeholder="Enter name"
                             onChange={(e)=>{setName(e.target.value)}}
                         />
-                        <button onClick={handleAdd2}>add</button>
-                        <button onClick={handleCancel}>cancel</button>
+                        <input className="inp11"
+                            type="email"
+                            value={pmail}
+                            placeholder="Enter email"
+                            onChange={(e)=>{setPmail(e.target.value)}}
+                        />
+                        
+                        <button className="allbtn11" onClick={handleAdd2}>Add</button>
+                        <button className="allbtn11" onClick={handleCancel}>Cancel</button>
                     </div>)
                 }
             </div>

@@ -1,0 +1,72 @@
+.outer11{
+    background-color: white;
+    /* height: 90vh; */
+    width: 100vw;
+}
+.whole11{
+    display: flex;
+    
+}
+.left11{
+    width: 48%;
+    padding-left: 2%;
+}
+.head11{
+    font-size: 10vh;
+    font-family: math;
+    padding-top: 6vw;
+    padding-bottom: 5vh;
+
+    color: rgb(139, 5, 5);
+    animation: 2s slideIn forwards;
+}
+@keyframes slideIn{
+    from{
+        transform: translateX(-80vh);
+    }
+    to{
+        transform: translateX(0vh);
+    }
+}
+.btndiv11{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+.update11{
+    width: 38vh;
+    height: 8vh;
+    background-color: rgb(139, 5, 5);
+    font-size: 3vh;
+    color: white;
+    
+    /* box-shadow: 12px; */
+    border: 0px;
+    border-radius: 12px;
+}
+.right11{
+    width: 50%;
+}
+.img11{
+    width: 100%;
+}
+.allbtn11{
+    width: 10vh;
+    height: 5vh;
+    background-color:rgb(139, 5, 5);
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.input11{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.inp11{
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding-left: 2vh;
+}

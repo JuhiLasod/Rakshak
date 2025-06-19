@@ -39,7 +39,7 @@ function App() {
       <Route path="/reset-password" element={<ResetPass/>}/>
       {/* <Route path="/about-us" element={<Layout><AboutUs/></Layout>}/> */}
       <Route path="/home" element={<LayoutIn><PrivateRoute><Home/></PrivateRoute></LayoutIn>}/>
-      <Route path="/my-people" element={<MyPeople/>}/>
+      <Route path="/my-people" element={<LayoutIn><MyPeople/></LayoutIn>}/>
       <Route path="/dash1" element={<Dash1/>}/>
       <Route path="/about-us" element={token ?<LayoutIn><AboutUs/></LayoutIn> : <Layout><AboutUs/></Layout>}/>
       <Route path="/donate" element={token ?<LayoutIn><Donate/></LayoutIn> : <Layout><Donate/></Layout>}/>

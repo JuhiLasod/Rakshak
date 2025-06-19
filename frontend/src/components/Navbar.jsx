@@ -21,7 +21,7 @@ function Navbar(){
                                                             navigate("/login")}}><span>Rate us</span></button>
                 <button className="navbtn" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
                                                             navigate("/donate")}}><span>Donate</span></button>
-                <button className="navbtn"><span>Future Goals</span></button>
+                {/* <button className="navbtn"><span>Future Goals</span></button> */}
                 <button className="navbtn" onClick={()=>{window.scrollTo({top: 0, behavior: 'smooth' })
                                                             navigate("/contact-us")}}><span>Contact us</span></button>
                 <button className="loginbtn" onClick={handlesignup}><span>Sign up</span></button>
