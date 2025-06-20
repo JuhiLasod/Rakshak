@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 dotenv.config();
 const alertController=async(req,res)=>{
-    const {email}=req.body;
+    const {email,location}=req.body;
     // const pmails=[];
     const user=await MyPeople.findOne({email});
     // console.log(user);
@@ -31,7 +31,7 @@ This individual is currently facing a critical and potentially dangerous situati
 
 Please proceed without delay to the following location to offer support:
 
- {link}
+  ${location.lat}\nLongitude: ${location.lng}\nGoogle Maps: https://maps.google.com/?q=${location.lat},${location.lng}
 
 Your safety and vigilance are paramount.
 Thank you for standing by those in need.
