@@ -9,6 +9,43 @@ import "./MyProfile.css";
 function MyProfile(){
     const navigate=useNavigate();
     const [loading,setLoading]=useState(false);
+    const [status, setStatus] = useState('');
+
+    const handleSendLoc = async () => {
+        if (!navigator.geolocation) {
+            setStatus("Couldn't access location");
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const location = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                try {
+                    const res = await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert", {
+                        // const res = await fetch("http://localhost:8000/api/sendlocation", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email, location })
+                    });
+                    const text = await res.text();
+                    setStatus("Successfully sent location!");
+                } catch (err) {
+                    setStatus("Failed to send location.");
+                }
+            },
+            (error) => {
+                setStatus("Permission denied or error fetching location.");
+                console.error("Geolocation error:", error);
+            }
+            
+        );
+        alert(status);
+    };
+
     const email=localStorage.getItem("email");
     console.log(email);
     const handleLogout=async()=>{
@@ -20,18 +57,18 @@ function MyProfile(){
         navigate("/");
         // window.location.href = "/";
     }
-    const handleAlert=async()=>{
-        setLoading(true);
-        const em='1';
-        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert",{
-            method:"POST",
-            headers: {"Content-Type":"application/json"},
-            body: JSON.stringify({email,em})
-        });
-        const text=await res.json();
-        setLoading(false);
-        window.alert(text);
-    }
+    // const handleAlert=async()=>{
+    //     setLoading(true);
+    //     const em='1';
+    //     const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert",{
+    //         method:"POST",
+    //         headers: {"Content-Type":"application/json"},
+    //         body: JSON.stringify({email,em})
+    //     });
+    //     const text=await res.json();
+    //     setLoading(false);
+    //     window.alert(text);
+    // }
     const images = [
         myp3,
         myp2,
@@ -50,7 +87,7 @@ function MyProfile(){
                 <div className="userdiv5">Username - &nbsp;&nbsp;<span>{email}</span></div>
                 <div className="btndiv5">
                     <button disabled={loading} onClick={()=>{navigate("/my-people")} }>My People</button>
-                    <button onClick={handleAlert} disabled={loading}>Share my Location</button>
+                    <button onClick={handleSendLoc} disabled={loading}>Share my Location</button>
                     <button onClick={handleLogout} disabled={loading}>Logout</button>
                 </div>
             </div>
