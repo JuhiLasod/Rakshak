@@ -1,0 +1,1 @@
+RAKSHAK is an emergency SOS website that sends instant alerts with your live location at the click of a button. The platform features secure JWT authentication and email notifications for added safety. Additionally it includes a donation system to support those in crisis, integrating live location tracking with seamless emergency response and community aid.
