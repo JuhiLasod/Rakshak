@@ -68,7 +68,7 @@ function Home(){
                 {/* // style={{backgroundImage: `url(${homemyp})` }}> */}
                 {/* <img className="img9" src={homemyp} alt="people"/> */}
                 {/* <div className="left9"> */}
-                    <button  className="right9" onClick={handleAlert} disabled={loading}>I NEED HELP</button>
+                    <button  className="right9" onClick={handleSendLoc} disabled={loading}>I NEED HELP</button>
                     {/* <div  className="left9"onClick={handlePeopleList}>My people</div> */}
                 {/* </div> */}
                 {/* <div className="right9"> */}
