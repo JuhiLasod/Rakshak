@@ -26,7 +26,7 @@ function Home(){
     // }
     const handleSendLoc = async () => {
         if (!navigator.geolocation) {
-            setStatus("Couldn't access location");
+            // setStatus("Couldn't access location");
             alert("Could'nt send location");
             return;
         }
@@ -46,15 +46,15 @@ function Home(){
                         body: JSON.stringify({ email, location })
                     });
                     const text = await res.text();
-                    setStatus("Successfully sent location!");
+                    // setStatus("Successfully sent location!");
                     alert("Successfully sent location!");
                 } catch (err) {
-                    setStatus("Failed to send location.");
+                    // setStatus("Failed to send location.");
                     alert("Failed to send location.");
                 }
             },
             (error) => {
-                setStatus("Permission denied or error fetching location.");
+                // setStatus("Permission denied or error fetching location.");
                 alert("Permission denied or error fetching location.");
                 console.error("Geolocation error:", error);
             }
