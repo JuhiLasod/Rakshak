@@ -11,9 +11,44 @@ function MyProfile(){
     const [loading,setLoading]=useState(false);
     const [status, setStatus] = useState('');
 
+    // const handleSendLoc = async () => {
+    //     if (!navigator.geolocation) {
+    //         setStatus("Couldn't access location");
+    //         return;
+    //     }
+
+    //     navigator.geolocation.getCurrentPosition(
+    //         async (position) => {
+    //             const location = {
+    //                 lat: position.coords.latitude,
+    //                 lng: position.coords.longitude
+    //             };
+
+    //             try {
+    //                 const res = await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert", {
+    //                     // const res = await fetch("http://localhost:8000/api/sendlocation", {
+    //                     method: "POST",
+    //                     headers: { "Content-Type": "application/json" },
+    //                     body: JSON.stringify({ email, location })
+    //                 });
+    //                 const text = await res.text();
+    //                 setStatus("Successfully sent location!");
+    //             } catch (err) {
+    //                 setStatus("Failed to send location.");
+    //             }
+    //         },
+    //         (error) => {
+    //             setStatus("Permission denied or error fetching location.");
+    //             console.error("Geolocation error:", error);
+    //         }
+            
+    //     );
+    //     alert(status);
+    // };
     const handleSendLoc = async () => {
         if (!navigator.geolocation) {
             setStatus("Couldn't access location");
+            alert("Could'nt send location");
             return;
         }
 
@@ -33,17 +68,20 @@ function MyProfile(){
                     });
                     const text = await res.text();
                     setStatus("Successfully sent location!");
+                    alert("Successfully sent location!");
                 } catch (err) {
                     setStatus("Failed to send location.");
+                    alert("Failed to send location.");
                 }
             },
             (error) => {
                 setStatus("Permission denied or error fetching location.");
+                alert("Permission denied or error fetching location.");
                 console.error("Geolocation error:", error);
             }
             
         );
-        alert(status);
+        // alert(status);
     };
 
     const email=localStorage.getItem("email");
