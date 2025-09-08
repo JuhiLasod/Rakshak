@@ -12,18 +12,52 @@ function Home(){
         navigate("/my-people");
     };
 
-    const handleAlert=async()=>{
-        setLoading(true);
-        const em='0';
-        const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert",{
-            method:"POST",
-            headers: {"Content-Type":"application/json"},
-            body: JSON.stringify({email,em})
-        });
-        const text=await res.json();
-        window.alert(text);
-        setLoading(false);
-    }
+    // const handleAlert=async()=>{
+    //     setLoading(true);
+    //     const em='0';
+    //     const res=await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert",{
+    //         method:"POST",
+    //         headers: {"Content-Type":"application/json"},
+    //         body: JSON.stringify({email,em})
+    //     });
+    //     const text=await res.json();
+    //     window.alert(text);
+    //     setLoading(false);
+    // }
+    const handleSendLoc = async () => {
+        if (!navigator.geolocation) {
+            setStatus("Couldn't access location");
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const location = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                try {
+                    const res = await fetch("https://rakshak-backend-dqut.onrender.com/api/alert/send-alert", {
+                        // const res = await fetch("http://localhost:8000/api/sendlocation", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email, location })
+                    });
+                    const text = await res.text();
+                    setStatus("Successfully sent location!");
+                } catch (err) {
+                    setStatus("Failed to send location.");
+                }
+            },
+            (error) => {
+                setStatus("Permission denied or error fetching location.");
+                console.error("Geolocation error:", error);
+            }
+            
+        );
+        alert(status);
+    };
     return (
         <div>
             <div className="outer9">
